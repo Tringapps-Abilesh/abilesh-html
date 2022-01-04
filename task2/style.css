@@ -1,1 +1,79 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background-image: url(image/spriteimage.svg);
+    height: 40px;
+    width: 154px;
+    float: right;
+    background-position: -239px 43px;
+}
+.head {
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.row {
+  padding-top: 25px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.left {
+  padding: 50px;
+  height: 100px;
+  flex: 33%;
+}
+.center{
+  padding: 50px;
+  height: 100px;
+  flex: 33%;
+}
+.right {
+  padding: 50px;
+  height: 100px;
+  flex: 33%;
+}
+.down {
+  padding: 50px;
+  height: 100px;
+  flex: 100%;
+}
+
+.content {
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .left,
+  .center,
+  .right,
+  .down {
+    flex: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .left,
+  .center,
+  .right,
+  .down {
+    flex: 50%;
+  }
+}
+@media screen and (max-width: 480px) and {
+  .left,
+  .center,
+  .right,
+  .down {
+    flex: 100%;
+  }
+}
