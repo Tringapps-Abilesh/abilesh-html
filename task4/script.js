@@ -16,7 +16,7 @@ function readFormData() {
     formData["fullName"] = document.getElementById("fullName").value;
     formData["birth"] = document.getElementById("birth").value;
     formData["phone"] = document.getElementById("phone").value;
-    formData["city"] = document.getElementById("city").value;
+    formData["gender"] = document.querySelector('input[name="gender"]:checked').value;
     formData["hobby"] = document.getElementById("hobby").value;
     return formData;
 }
@@ -31,7 +31,7 @@ function insertNewRecord(data) {
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.phone;
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.city;
+    cell4.innerHTML = data.gender;
     cell5 = newRow.insertCell(4);
     cell5.innerHTML = data.hobby;
     cell5 = newRow.insertCell(5);
@@ -43,7 +43,7 @@ function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("birth").value = "";
     document.getElementById("phone").value = "";
-    document.getElementById("city").value = "";
+    document.getElementById("gender").value = "";
     document.getElementById("hobby").value = "";
     selectedRow = null;
 }
@@ -53,14 +53,14 @@ function onEdit(td) {
     document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
     document.getElementById("birth").value = selectedRow.cells[1].innerHTML;
     document.getElementById("phone").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("city").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("gender").value = selectedRow.cells[3].innerHTML;
     document.getElementById("hobby").value = selectedRow.cells[4].innerHTML;
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.fullName;
     selectedRow.cells[1].innerHTML = formData.birth;
     selectedRow.cells[2].innerHTML = formData.phone;
-    selectedRow.cells[3].innerHTML = formData.city;
+    selectedRow.cells[3].innerHTML = formData.gender;
     selectedRow.cells[4].innerHTML = formData.hobby;
 }
 
