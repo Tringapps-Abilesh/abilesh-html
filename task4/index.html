@@ -23,11 +23,11 @@
                     </div>
                     <div>
                         <label>Date of Birth</label>
-                        <input type="number" name="empCode" id="empCode">
+                        <input type="date" name="birth" id="birth">
                     </div>
                     <div>
                         <label>Phone</label>
-                        <input type="number" name="salary" id="salary">
+                        <input type="number" name="phone" id="phone">
                     </div>
                     <div>
                         <label>Gender</label>
@@ -37,14 +37,14 @@
                         Other: <input type="radio" name="gender" value="other" name="city" id="city">
                     </div>
                     <div>
-                        <label>HObbies</label>
-                        <select name="hobby" id="hob">
+                        <label>Hobbies</label>
+                        <select name="hobby" id="hobby">
                             <option value="">Select hobby</option>
-                            <option value="cricket">English</option>
-                            <option value="volleyball">Tamil</option>
-                            <option value="songs">Hindi</option>
-                            <option value="drawing">Arabic</option>
-                            <option value="gardening">French</option>
+                            <option value="cricket">Cricket</option>
+                            <option value="volleyball">VolleyBall</option>
+                            <option value="songs">Songs</option>
+                            <option value="drawing">Drawing</option>
+                            <option value="gardening">Gardening</option>
                           </select>
                     </div>
                     
@@ -54,13 +54,14 @@
                 </form>
             </td>
             <td>
-                <table class="list" id="employeeList">
+                <table class="list" id="infoList">
                     <thead>
                         <tr>
                             <th>Full Name</th>
-                            <th>EMP Code</th>
-                            <th>Salary</th>
-                            <th>City</th>
+                            <th>Date of Birth</th>
+                            <th>Phone</th>
+                            <th>Gender</th>
+                            <th>Hobbey</th>
                             <th></th>
                         </tr>
                     </thead>
