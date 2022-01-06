@@ -1,6 +1,6 @@
 body > table{
     width: 80%;
-    background-color: #ecf00b;
+    background-color: rgb(215, 238, 13);
 }
 
 table{
@@ -22,37 +22,37 @@ tr:nth-child(even),table.list thead>tr {
 input[type=text], input[type=number] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px ;
     display: inline-block;
     border: 1px solid rgb(231, 21, 21);
-    border-radius: 4px;
+    border-radius: 6px;
     box-sizing: border-box;
 }
 
 input[type=submit]{
     width: 30%;
-    background-color: #ddd;
+    background-color: rgb(218, 9, 9);
     color: #000;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 8px ;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 form div.form-action-buttons{
-    text-align: right;
+    text-align: right;color: #d108b6;
 }
 
 a{
     cursor: pointer;
     text-decoration: underline;
-    color: #30db0e;
+    color: #c90c0c;
     margin-right: 4px;
 }
 
 label.validation-error{
-    color:   red;
+    color:   rgb(199, 5, 5);
     margin-left: 5px;
 }
 
