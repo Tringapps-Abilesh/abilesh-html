@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <style>
+      body {
+        background-color: rgb(240, 110, 4);
+      }
+      .myform {
+        margin-top: 15%;
+        margin-left: 38%;
+      }
+      .reg {
+        color: rgb(85, 16, 212);
+        font-size: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h2 class="reg">Registeration form</h2></center>
+    <form
+      method="post"
+      action="login.html"
+      onsubmit="return myFunction()"
+      class="myform"
+    >
+      NAME :<input
+        type="text"
+        id="name"
+        style="margin-left: 125px"
+        required
+      /><br /><br />
+
+      MOBILE NUMBER :<input
+        type="number"
+        id="mobile"
+        style="margin-left: 40px"
+        required
+      /><br /><br />
+
+      PASSWORD :<input
+        type="password"
+        id="pwd"
+        style="margin-left: 90px"
+        required
+      /><br /><br />
+
+      CONFIRM_PASSWORD :<input
+        type="password"
+        id="cnfpwd"
+        style="margin-left: 10px"
+        required
+      /><br /><br />
+
+      <input type="submit" style="margin-left: 150px" />
+    </form>
+  </body>
+</html>
+<script>
+  function myFunction() {
+    var pwd = document.getElementById('pwd').value
+    var cnfpwd = document.getElementById('cnfpwd').value
+    if (pwd == cnfpwd) {
+      alert('account created successfully')
+      var name = document.getElementById('name').value
+      var mobile = document.getElementById('mobile').value
+      var password = document.getElementById('pwd').value
+      let data = {
+        name: name,
+        mobile: mobile,
+        password: password,
+      }
+      localStorage.setItem('data', JSON.stringify(data))
+    } else {
+      alert('password and confirm password mismatch!!!')
+      return false
+    }
+  }
+</script>

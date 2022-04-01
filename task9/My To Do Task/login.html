@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style> 
+Body {
+    font-family: Calibri, Helvetica, sans-serif;
+    background-color: rgb(240, 199, 137);
+}
+button { 
+        background-color: #f11ce0; 
+        width: 50%;
+        color:WHITE; 
+        padding: 15px; 
+        border: none; 
+        cursor: pointer; 
+        } 
+input[type=number], input[type=password] { 
+        width: 50%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid rgb(199, 13, 174); 
+        box-sizing: border-box; 
+    }
+button:hover { 
+        opacity: 0.7; 
+    } 
+.cancelbtn { 
+        width: auto; 
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+.container { 
+        padding: 25px; 
+        display: flex;
+        flex-direction: column;
+        margin-left: 40%; 
+        margin-right:25%;
+    } 
+.log{
+    color: rgb(32, 172, 236);
+}
+</style> 
+</head>  
+<body>  
+    <center> <h1 class="log">Login Form </h1> </center> <br><br>
+    <form action="index.html" method="post" onsubmit="return myfunction()">
+        <div class="container"> 
+            <label>Mobile Number : </label> 
+            <input type="number" placeholder="Enter the  Mobile Number" name="mobile" id="mobile" required>
+            <label>Password : </label> 
+            <input type="password" placeholder="Enter  the Password" name="password" id="password" required>
+            <button type="submit">Login</button> <BR>
+        </div> 
+    </form>   
+</body>   
+</html>
+<script>
+function myfunction()
+{
+let newObject = localStorage.getItem("data");
+var obj=JSON.parse(newObject); 
+var mobile=document.getElementById("mobile").value;
+var password=document.getElementById("password").value;
+if(mobile == obj.mobile && password==obj.password)
+{}
+else
+{
+    alert("enter the correct username or password");
+    return false;
+}
+}
+</script>

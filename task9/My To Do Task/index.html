@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Title Document</title>
+    <link rel ="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h2>My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Things to be added...">
+        <span onclick="newElement()" class="addBtn">ADD THE THINGS</span>
+      </div>
+      
+      <ul id="myUL">
+        <li class="checked">morning 6 - wakeup </li>
+        <li class="checked">morning 8 - Getready </li>
+        <li>Morning 9 - have breakfast</li>
+        <li>afternoon 12 - complete the given task</li>
+        <li>afternoon 1 - go for lunch</li>
+        <li>afternoon 3 - cup of coffee</li>
+      </ul>
+      <button onclick="del()">REMOVE ALL</button>
+
+    <script src ="script.js"></script>
+</body>
+</html>
