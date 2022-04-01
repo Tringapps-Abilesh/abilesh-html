@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploading files and display</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Upload an image and a json file</h1>
+    <div class="upload">
+        <form method="get" action="display.html">
+            <label for="image">Image: </label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <label for="json">Json: </label>
+            <input type="file" id="json" name="json" accept=".json" required><br><br><br><br>
+            <button type="submit" onclick="saveLocalStorage()">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
