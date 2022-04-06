@@ -1,7 +1,7 @@
 function searchFun(){
     var key=document.querySelector("#searchBox").value.toUpperCase();
     var myItems=document.querySelectorAll(".items");
-    for(let value of myItems){
+    for(let i of myItems){
       var inItems=myItems[i].querySelector("a").innerText.toUpperCase();
       if(inItems.indexOf(key)>-1){
         myItems[i].style.display=""
