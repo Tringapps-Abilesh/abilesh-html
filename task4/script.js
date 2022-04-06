@@ -24,15 +24,15 @@ function readFormData() {
 function insertNewRecord(data) {
     var table = document.getElementById("infoList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
+    var cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.fullName;
-    cell2 = newRow.insertCell(1);
+    var cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.birth;
-    cell3 = newRow.insertCell(2);
+    var cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.phone;
-    cell4 = newRow.insertCell(3);
+    var cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.gender;
-    cell5 = newRow.insertCell(4);
+    var cell5 = newRow.insertCell(4);
     cell5.innerHTML = data.hobby;
     cell5 = newRow.insertCell(5);
     cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
@@ -66,13 +66,13 @@ function updateRecord(formData) {
 
 function onDelete(td) {
     if (confirm('Are you sure to delete this record ?')) {
-        row = td.parentElement.parentElement;
+        var row = td.parentElement.parentElement;
         document.getElementById("infoList").deleteRow(row.rowIndex);
         resetForm();
     }
 }
 function validate() {
-    isValid = true;
+    var isValid = true;
     if (document.getElementById("fullName").value == "") {
         isValid = false;
         document.getElementById("fullNameValidationError").classList.remove("hide");
@@ -84,7 +84,7 @@ function validate() {
     return isValid;
 }
 
-function validate() {
+function validation() {
     isValid = true;
     if (document.getElementById("birth").value == "") {
         isValid = false;
