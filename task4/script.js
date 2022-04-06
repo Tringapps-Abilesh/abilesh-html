@@ -85,10 +85,10 @@ function validate() {
 
 function validation() {
     if (document.getElementById("birth").value == "") {
-        let isValid = false;
+        var isValid = false;
         document.getElementById("fullNameValidationError").classList.remove("hide");
     } else {
-        isValid = true;
+        var isValid = true;
         if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
             document.getElementById("fullNameValidationError").classList.add("hide");
     }
