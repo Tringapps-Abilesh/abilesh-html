@@ -85,7 +85,7 @@ function validate() {
 
 function validation() {
     if (document.getElementById("birth").value == "") {
-        isValid = false;
+        var isValid = false;
         document.getElementById("fullNameValidationError").classList.remove("hide");
     } else {
         isValid = true;
